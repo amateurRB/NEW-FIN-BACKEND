@@ -9,7 +9,7 @@ import javax.persistence.OneToOne;
 public class User {
 	@Id
 	@GeneratedValue
-	private int id;
+	private Long id;
 	private String fullname;
 	private String surname;
 	private String mailid;
@@ -48,10 +48,10 @@ public class User {
 	}
 
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getFullname() {
@@ -99,6 +99,7 @@ public class User {
 		result = prime * result + ((address == null) ? 0 : address.hashCode());
 		result = prime * result + ((fullname == null) ? 0 : fullname.hashCode());
 		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((mailid == null) ? 0 : mailid.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((phonenumber == null) ? 0 : phonenumber.hashCode());
